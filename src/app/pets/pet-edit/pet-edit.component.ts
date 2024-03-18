@@ -60,7 +60,9 @@ export class PetEditComponent implements OnInit {
       this.dataStorageService.editPet(this.petService.getPet(this.id));
     } else {
       this.petService.addPet(this.petForm.value)
-      this.dataStorageService.storePet(this.petForm.value, this.ownerService.getOwnerId());
+      this.dataStorageService.storePet(this.petForm.value, this.ownerService.getOwnerId()).subscribe(result => {
+        this.dataStorageService.fetchPets(this.ownerService.getOwnerId()).subscribe(result);
+      });
     }
     this.onCancel();
   }

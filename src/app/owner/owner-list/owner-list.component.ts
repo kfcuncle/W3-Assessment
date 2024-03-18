@@ -25,6 +25,10 @@ export class OwnerListComponent {
     console.log(this.owners);
   }
 
+  onNewOwner() {
+    this.router.navigate(['new'], {relativeTo: this.route});
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe()
   }

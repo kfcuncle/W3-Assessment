@@ -12,6 +12,7 @@ const appRoutes: Routes = [
         { path: ':id', component: PetEditComponent },
     ] },
     { path: 'owner', component: OwnerComponent , children: [
+        { path: 'new', component: OwnerDetailComponent },
         { path: ':id', component: OwnerDetailComponent }
     ]}
 ]
