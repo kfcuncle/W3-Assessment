@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12">
+        @for (ownerEl of owners; track $index) {
+            <a style="cursor: pointer;" [routerLink]="[ownerEl.id]" routerLinkActive="active" class="list-group-item clearfix">
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">{{ownerEl.lastName}} {{ownerEl.firstName}}</h4>
+                    <p class="list-group-item-text">Date Modified: {{ownerEl.dateModified}}</p>
+                    <p class="list-group-item-text">Date Created : {{ownerEl.dateCreated}}</p>
+                </div>
+            </a>
+    }
+    </div>
+</div>
