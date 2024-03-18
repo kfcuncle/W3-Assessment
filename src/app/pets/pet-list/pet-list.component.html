@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-xs-12">
+        @for (pet of pets; track $index) {
+            <a style="cursor: pointer;" [routerLink]="[$index]" routerLinkActive="active" class="list-group-item clearfix">
+                <div class="pull-left">
+                    <h4 class="list-group-item-heading">Name: {{pet.name}}</h4>
+                    <p class="list-group-item-text">Breed: {{pet.breed}}</p>
+                    <p class="list-group-item-text">Date Created: {{pet.dateCreated}}</p>
+                    <p class="list-group-item-text">Date Modified: {{pet.dateModified}}</p>
+                </div>
+            </a>
+    }
+    </div>
+</div>
+
